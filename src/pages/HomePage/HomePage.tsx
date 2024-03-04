@@ -1,12 +1,7 @@
 import { NavigationIcon } from "@/components/Icons/Icons";
 
 const HomePage = () => {
-  return (
-    <div>
-      HomePage
-      <NavigationIcon />
-    </div>
-  );
+  return <div>HomePage</div>;
 };
 
 export default HomePage;
