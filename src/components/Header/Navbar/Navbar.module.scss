@@ -1,0 +1,10 @@
+@use '../../../assets/scss/common/mixins' as mixin;
+
+.navbar {
+  background: var(--light-gray);
+
+  &__content {
+    padding: 10px;
+    @include mixin.flex(center, null, null, 20px)
+  }
+}

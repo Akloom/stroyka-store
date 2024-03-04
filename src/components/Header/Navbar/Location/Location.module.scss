@@ -1,0 +1,85 @@
+@use '../../../../assets/scss/common/mixins' as mixin;
+
+.location {
+  margin-top: 25px;
+  @include mixin.flex(null, null, column, 25px);
+
+  &__search {
+    width: 100%;
+    padding: 12px 16px;
+    @include mixin.flex(center, null, null, 15px);
+    border-bottom: 1px solid var(--gray);
+    background: var(--light-gray);
+  }
+
+  &__input {
+    width: 100%;
+    @include mixin.font(18px, 500, normal, var(--dark-blue-700));
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--dark-blue-500);
+  }
+
+  &__cities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    white-space: nowrap;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 468px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: max-content;
+    cursor: pointer;
+    @include mixin.font(16px, 500, normal, var(--dark-blue-700));
+    transition: .4s ease-in;
+
+    &:hover {
+      color: var(--yellow);
+    }
+
+    &::before {
+      content: '';
+      @include mixin.position(absolute, null, null, -5px, 0);
+      width: 0;
+      height: 2px;
+      border-radius: 12px;
+      background: var(--yellow);
+      transition: .4s ease-in;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  &__error {
+    @include mixin.font(16px, 500, normal, var(--red));
+  }
+}
+
+.button {
+  cursor: pointer;
+  @include mixin.flex(center, null, null, 8px);
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--dark-blue-500);
+  }
+
+  &__text {
+    @include mixin.font(15px, 500, normal, var(--dark-blue-500));
+  }
+}

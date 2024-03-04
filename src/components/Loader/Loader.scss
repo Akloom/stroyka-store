@@ -5,12 +5,12 @@
   flex-direction: column;
   gap: 30px;
   min-height: 80vh;
-  background: #ffffff;
+  background: var(--white);
 }
 
 .loader {
   border: 8px solid var(--yellow);
-  border-top: 8px solid var(--dark-blue);
+  border-top: 8px solid var(--dark-blue-500);
   border-radius: 50%;
   width: 100px;
   height: 100px;
