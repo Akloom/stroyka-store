@@ -1,0 +1,67 @@
+@use '../../../assets/scss/common/mixins' as mixin;
+
+.nav {
+  padding: 10px 0;
+  border-top: 1px solid var(--light-gray-200);
+  border-bottom: 1px solid var(--light-gray-200);
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 2px;
+  }
+
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow);
+  }
+
+  &__content {
+    @include mixin.flex(center, space-between, null, 20px);
+  }
+
+  &__link {
+    position: relative;
+    white-space: nowrap;
+    @include mixin.link(16px, 500, var(--dark-blue-600));
+    transition: .4s ease-in;
+
+    &:hover {
+      color: var(--yellow);
+    }
+
+    &::before {
+      content: '';
+      @include mixin.position(absolute, null, null, -10px, 0);
+      width: 0;
+      height: 2px;
+      border-radius: 12px;
+      background: var(--yellow);
+      transition: .4s ease-in;
+
+      @media screen and (max-width: 1075px) {
+        display: none;
+      }
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+}
+
+.link__active {
+  color: var(--yellow);
+
+  &::before {
+    width: 100%;
+  }
+}
