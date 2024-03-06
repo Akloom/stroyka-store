@@ -11,7 +11,7 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, rgb(213, 196, 7) 0%, rgb(176, 199, 3) 100%);
+    background: var(--yellow);
     border-radius: 4px;
   }
 }
