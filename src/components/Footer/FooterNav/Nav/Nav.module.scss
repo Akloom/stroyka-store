@@ -1,0 +1,32 @@
+@use "../../../../assets/scss/common/mixins" as mixin;
+
+.nav {
+  width: 100%;
+  @include mixin.flex(null, space-between, null, 12px);
+
+  &__item {
+    @include mixin.flex(null, null, column, 12px);
+  }
+
+  &__link {
+    @include mixin.link(16px, 500, var(--light-gray-200));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    &__link {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav {
+    flex-direction: column;
+
+    &__link {
+      font-size: 14px;
+    }
+  }
+}
