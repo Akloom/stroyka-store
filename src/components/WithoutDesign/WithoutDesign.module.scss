@@ -42,3 +42,52 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .withoutDesign {
+    gap: 20px;
+    min-height: 60vh;
+
+    &__title {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    &__content {
+      gap: 10px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+
+    &__link {
+      padding: 12px 24px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .withoutDesign {
+    gap: 10px;
+    min-height: 50vh;
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__content {
+      gap: 5px;
+    }
+
+    &__desc {
+      font-size: 12px;
+    }
+
+    &__link {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
+  }
+}
