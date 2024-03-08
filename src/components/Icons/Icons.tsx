@@ -62,3 +62,21 @@ export const LetterIcon = () => {
     </svg>
   );
 };
+
+export const ArrowLeftIcon = () => {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 12H5" />
+      <path d="M12 5L5 12L12 19" />
+    </svg>
+  );
+};
+
+export const ArrowRightIcon = () => {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 12H19" />
+      <path d="M12 5L19 12L12 19" />
+    </svg>
+  );
+};
