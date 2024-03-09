@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "./BannerSlider.module.scss";
-import { ArrowLeftIcon, ArrowRightIcon } from "../Icons/Icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "@/components/Icons/Icons";
 
 const BannerSlider = () => {
   return (
