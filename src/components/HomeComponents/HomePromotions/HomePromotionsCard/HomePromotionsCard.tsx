@@ -16,13 +16,7 @@ const HomePromotionsCard = ({ data }: HomePromotionsCardProps) => {
     <div className={styles.card}>
       <div className={styles.card__image}>
         <p className={styles.card__discount}>{data.discount}</p>
-        <Image
-          src={data.image}
-          alt="image"
-          className={styles.card__image}
-          width={278}
-          height={208}
-        />
+        <Image src={data.image} alt="image" width={278} height={208} />
       </div>
       <div className={styles.card__content}>
         <p className={styles.card__desc}>{data.description}</p>
