@@ -1,8 +1,8 @@
 import Link from "next/link";
-import styles from "./HomeCategories.module.scss";
+import styles from "./PopularCategories.module.scss";
 import cn from "clsx";
 import { ArrowLinkIcon } from "@/components/Icons/Icons";
-import HomeCategoriesCard from "./HomeCategoriesCard/HomeCategoriesCard";
+import PopularCategoriesCard from "./PopularCategoriesCard/PopularCategoriesCard";
 
 interface Categories {
   id: number;
@@ -10,11 +10,11 @@ interface Categories {
   image: string;
 }
 
-interface HomeCategoriesProps {
+interface PopularCategoriesProps {
   data: Categories[];
 }
 
-const HomeCategories = ({ data }: HomeCategoriesProps) => {
+const PopularCategories = ({ data }: PopularCategoriesProps) => {
   return (
     <div className={cn(styles.categories, "container")}>
       <div className={styles.categories__heading}>
@@ -32,7 +32,7 @@ const HomeCategories = ({ data }: HomeCategoriesProps) => {
               href={`/category/${itemData.title}`}
               style={{ textDecoration: "none" }}
             >
-              <HomeCategoriesCard data={itemData} />
+              <PopularCategoriesCard data={itemData} />
             </Link>
           );
         })}
@@ -41,4 +41,4 @@ const HomeCategories = ({ data }: HomeCategoriesProps) => {
   );
 };
 
-export default HomeCategories;
+export default PopularCategories;

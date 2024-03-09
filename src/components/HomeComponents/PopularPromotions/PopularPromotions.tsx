@@ -1,8 +1,8 @@
 import Link from "next/link";
-import styles from "./HomePromotions.module.scss";
+import styles from "./PopularPromotions.module.scss";
 import cn from "clsx";
+import PopularPromotionsCard from "./PopularPromotionsCard/PopularPromotionsCard";
 import { ArrowLinkIcon } from "@/components/Icons/Icons";
-import PopularPromotionsCard from "../PopularPromotions/PopularPromotionsCard/PopularPromotionsCard";
 
 interface Promotion {
   description: string;
@@ -12,11 +12,11 @@ interface Promotion {
   discount: string;
 }
 
-interface HomePromotionsProps {
+interface PopularPromotionsProps {
   data: Promotion[];
 }
 
-const HomePromotions = ({ data }: HomePromotionsProps) => {
+const PopularPromotions = ({ data }: PopularPromotionsProps) => {
   return (
     <div className={cn(styles.promotions, "container")}>
       <div className={styles.promotions__heading}>
@@ -36,4 +36,4 @@ const HomePromotions = ({ data }: HomePromotionsProps) => {
   );
 };
 
-export default HomePromotions;
+export default PopularPromotions;

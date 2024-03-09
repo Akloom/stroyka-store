@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "./HomePromotionsCard.module.scss";
+import styles from "./PopularPromotionsCard.module.scss";
 
-interface HomePromotionsCardProps {
+interface PopularPromotionsCardProps {
   data: {
     description: string;
     image: string;
@@ -11,7 +11,7 @@ interface HomePromotionsCardProps {
   };
 }
 
-const HomePromotionsCard = ({ data }: HomePromotionsCardProps) => {
+const PopularPromotionsCard = ({ data }: PopularPromotionsCardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.card__image}>
@@ -32,4 +32,4 @@ const HomePromotionsCard = ({ data }: HomePromotionsCardProps) => {
   );
 };
 
-export default HomePromotionsCard;
+export default PopularPromotionsCard;

@@ -1,14 +1,14 @@
 import Image from "next/image";
-import styles from "./HomeCategoriesCard.module.scss";
+import styles from "./PopularCategoriesCard.module.scss";
 
-interface HomeCategoriesCardProps {
+interface PopularCategoriesCardProps {
   data: {
     title: string;
     image: string;
   };
 }
 
-const HomeCategoriesCard = ({ data }: HomeCategoriesCardProps) => {
+const PopularCategoriesCard = ({ data }: PopularCategoriesCardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.card__title}>{data.title}</div>
@@ -19,4 +19,4 @@ const HomeCategoriesCard = ({ data }: HomeCategoriesCardProps) => {
   );
 };
 
-export default HomeCategoriesCard;
+export default PopularCategoriesCard;

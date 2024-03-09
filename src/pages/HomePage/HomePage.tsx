@@ -1,6 +1,6 @@
 import BannerSlider from "@/components/HomeComponents/Banner/BannerSlider";
-import HomeCategories from "@/components/HomeComponents/HomeCategories/HomeCategories";
-import HomePromotions from "@/components/HomeComponents/HomePromotions/HomePromotions";
+import HomeCategories from "@/components/HomeComponents/PopularCategories/PopularCategories";
+import HomePromotions from "@/components/HomeComponents/PopularPromotions/PopularPromotions";
 
 const HomePage = () => {
   const promotionsData = [
