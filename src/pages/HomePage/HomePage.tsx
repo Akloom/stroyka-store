@@ -1,9 +1,8 @@
 import BannerSlider from "@/components/HomeComponents/Banner/BannerSlider";
+import PopularBrands from "@/components/HomeComponents/PopularBrands/PopularBrands";
 import PopularCategories from "@/components/HomeComponents/PopularCategories/PopularCategories";
-import HomeCategories from "@/components/HomeComponents/PopularCategories/PopularCategories";
 import PopularProducts from "@/components/HomeComponents/PopularProducts/PopularProducts";
 import PopularPromotions from "@/components/HomeComponents/PopularPromotions/PopularPromotions";
-import HomePromotions from "@/components/HomeComponents/PopularPromotions/PopularPromotions";
 
 const HomePage = () => {
   const promotionsData = [
@@ -179,12 +178,64 @@ const HomePage = () => {
     },
   ];
 
+  const brandsData = [
+    {
+      id: 1,
+      image: "/img/home-brands-1.png",
+    },
+    {
+      id: 2,
+      image: "/img/home-brands-2.png",
+    },
+    {
+      id: 3,
+      image: "/img/home-brands-3.png",
+    },
+    {
+      id: 4,
+      image: "/img/home-brands-4.png",
+    },
+    {
+      id: 5,
+      image: "/img/home-brands-5.png",
+    },
+    {
+      id: 6,
+      image: "/img/home-brands-6.png",
+    },
+    {
+      id: 7,
+      image: "/img/home-brands-7.png",
+    },
+    {
+      id: 8,
+      image: "/img/home-brands-8.png",
+    },
+    {
+      id: 9,
+      image: "/img/home-brands-9.png",
+    },
+    {
+      id: 10,
+      image: "/img/home-brands-10.png",
+    },
+    {
+      id: 11,
+      image: "/img/home-brands-11.png",
+    },
+    {
+      id: 12,
+      image: "/img/home-brands-12.png",
+    },
+  ];
+
   return (
     <>
       <BannerSlider />
       <PopularPromotions data={promotionsData} />
       <PopularCategories data={categoriesData} />
       <PopularProducts data={productsData} />
+      <PopularBrands data={brandsData} />
     </>
   );
 };

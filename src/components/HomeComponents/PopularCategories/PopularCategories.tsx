@@ -20,7 +20,7 @@ const PopularCategories = ({ data }: PopularCategoriesProps) => {
       <div className={styles.categories__heading}>
         <h1 className={styles.categories__title}>Популярные категории</h1>
         <Link href="/categories" className={styles.categories__link}>
-          <span>Все акции</span>
+          <span>Все категории</span>
           <ArrowLinkIcon />
         </Link>
       </div>

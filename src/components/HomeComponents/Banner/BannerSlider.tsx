@@ -31,6 +31,7 @@ const BannerSlider = () => {
               alt="banner slider image"
               width={1360}
               height={420}
+              style={{ width: "auto", height: "auto" }}
             />
             <div className={styles.banner__content}>
               <div className={styles.banner__info}>

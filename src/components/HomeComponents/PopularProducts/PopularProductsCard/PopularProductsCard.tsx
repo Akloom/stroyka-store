@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./PopularProsuctsCard.module.scss";
+import styles from "./PopularProductsCard.module.scss";
 
 interface PopularProductsCardProps {
   data: {
@@ -13,7 +13,13 @@ const PopularProductsCard = ({ data }: PopularProductsCardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.card__image}>
-        <Image src={data.image} alt="image" width={278} height={208} />
+        <Image
+          src={data.image}
+          alt="image"
+          width={278}
+          height={208}
+          style={{ width: "100%", height: "auto" }}
+        />
       </div>
       <div className={styles.card__content}>
         <p className={styles.card__desc}>{data.description}</p>
