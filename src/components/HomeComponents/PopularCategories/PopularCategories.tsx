@@ -31,6 +31,7 @@ const PopularCategories = ({ data }: PopularCategoriesProps) => {
             <Link
               href={`/category/${itemData.title}`}
               style={{ textDecoration: "none" }}
+              key={itemData.id}
             >
               <PopularCategoriesCard data={itemData} />
             </Link>

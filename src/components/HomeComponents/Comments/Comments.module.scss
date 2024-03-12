@@ -1,0 +1,251 @@
+@use "../../../assets/scss/common/mixins" as mixin;
+
+.mySwiper {
+  overflow: visible !important;
+  height: 365px !important;
+}
+
+.comments {
+  margin-top: 80px;
+  padding: 80px 0;
+  background: var(--light-gray);
+
+  &__heading {
+    @include mixin.flex(center, space-between, null, 20px);
+  }
+
+  &__title {
+    @include mixin.font(34px, 600, normal, var(--dark-blue-700));
+  }
+
+  &__buttons {
+    @include mixin.flex(center, null, null, 12px);
+  }
+
+  &__btn {
+    cursor: pointer;
+    padding: 14px;
+    border: 1px solid var(--gray);
+    background: var(--white);
+    @include mixin.flex(center, center, null, null);
+
+    svg {
+      width: 24px;
+      height: 24px;
+      stroke-width: 2px;
+      stroke: var(--dark-blue-600);
+    }
+  }
+
+  &__content {
+    @include mixin.flex(null, null, column, 16px);
+  }
+
+  &__slider {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__card {
+    height: 100%;
+    padding: 24px;
+    background: var(--white);
+    @include mixin.flex(null, null, column, 12px);
+
+    &Author {
+      @include mixin.flex(center, null, null, 12px);
+    }
+
+    &Heading {
+      @include mixin.flex(start, space-between, null, 10px);
+    }
+
+    &Image {
+      max-width: 52px;
+      width: 100%;
+    }
+
+    &Title {
+      @include mixin.font(18px, 700, normal, var(--dark-blue-700));
+    }
+
+    &Content {
+      height: 100%;
+      @include mixin.flex(null, null, column, 10px);
+    }
+
+    &Desc {
+      @include mixin.font(16px, 400, normal, var(--dark-blue-700));
+    }
+
+    &Date {
+      margin-top: auto;
+      @include mixin.font(15px, 500, normal, var(--gray-400));
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .comments {
+    margin-top: 60px;
+    padding: 60px 0;
+
+    &__title {
+      font-size: 34px
+    }
+
+    &__buttons {
+      gap: 10px;
+    }
+
+    &__btn {
+      padding: 14px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__content {
+      gap: 15px;
+    }
+
+    &__card {
+      padding: 20px;
+      gap: 10px;
+
+      &Author {
+        gap: 10px;
+      }
+
+      &Image {
+        max-width: 52px;
+      }
+
+      &Title {
+        font-size: 18px;
+      }
+
+      &Desc {
+        font-size: 16px;
+      }
+
+      &Date {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .comments {
+    margin-top: 40px;
+    padding: 40px 0;
+
+    &__title {
+      font-size: 28px
+    }
+
+    &__buttons {
+      gap: 10px;
+    }
+
+    &__btn {
+      padding: 12px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__content {
+      gap: 15px;
+    }
+
+    &__card {
+      padding: 16px;
+      gap: 10px;
+
+      &Author {
+        gap: 8px;
+      }
+
+      &Image {
+        max-width: 42px;
+      }
+
+      &Title {
+        font-size: 16px;
+      }
+
+      &Desc {
+        font-size: 14px;
+      }
+
+      &Date {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .mySwiper {
+    height: 285px !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .mySwiper {
+    height: 265px !important;
+  }
+
+  .comments {
+    margin-top: 30px;
+    padding: 30px 0;
+
+    &__title {
+      font-size: 20px
+    }
+
+    &__buttons {
+      gap: 8px;
+    }
+
+    &__btn {
+      padding: 8px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &__content {
+      gap: 10px;
+    }
+
+    &__card {
+      padding: 10px;
+      gap: 8px;
+
+      &Image {
+        max-width: 35px;
+      }
+
+      &Title {
+        font-size: 14px;
+      }
+
+      &Desc {
+        font-size: 12px;
+      }
+
+      &Date {
+        font-size: 12px;
+      }
+    }
+  }
+}

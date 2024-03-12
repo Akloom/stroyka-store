@@ -5,6 +5,7 @@ import { ArrowLinkIcon } from "@/components/Icons/Icons";
 import PopularProductCard from "./PopularProductsCard/PopularProductsCard";
 
 interface Product {
+  id: number;
   description: string;
   image: string;
   price: string;
@@ -27,7 +28,7 @@ const PopularProducts = ({ data }: PopularProductsProps) => {
 
       <div className={styles.products__cards}>
         {data.map((itemData) => {
-          return <PopularProductCard data={itemData} />;
+          return <PopularProductCard key={itemData.id} data={itemData} />;
         })}
       </div>
     </div>

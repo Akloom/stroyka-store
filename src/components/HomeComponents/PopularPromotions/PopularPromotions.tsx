@@ -5,6 +5,7 @@ import PopularPromotionsCard from "./PopularPromotionsCard/PopularPromotionsCard
 import { ArrowLinkIcon } from "@/components/Icons/Icons";
 
 interface Promotion {
+  id: number;
   description: string;
   image: string;
   oldPrice: string;
@@ -29,7 +30,7 @@ const PopularPromotions = ({ data }: PopularPromotionsProps) => {
 
       <div className={styles.promotions__cards}>
         {data.map((itemData) => {
-          return <PopularPromotionsCard data={itemData} />;
+          return <PopularPromotionsCard key={itemData.id} data={itemData} />;
         })}
       </div>
     </div>

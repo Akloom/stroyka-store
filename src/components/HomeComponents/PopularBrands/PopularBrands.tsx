@@ -27,7 +27,7 @@ const PopularBrands = ({ data }: PopularBrandsProps) => {
       <div className={styles.brands__cards}>
         {data.map((itemData) => {
           return (
-            <div className={styles.brands__card}>
+            <div className={styles.brands__card} key={itemData.id}>
               <Image
                 src={itemData.image}
                 alt="image"
