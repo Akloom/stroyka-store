@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "popular_products",
+  "info": {
+    "singularName": "popular-product",
+    "pluralName": "popular-products",
+    "displayName": "Популярные продукты"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "maxLength": 120
+    },
+    "price": {
+      "type": "integer"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

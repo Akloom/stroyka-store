@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "popular_promotions",
+  "info": {
+    "singularName": "popular-promotion",
+    "pluralName": "popular-promotions",
+    "displayName": "Популярные акции",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "discount": {
+      "type": "integer"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
