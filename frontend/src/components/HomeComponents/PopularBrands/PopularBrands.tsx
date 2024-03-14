@@ -6,7 +6,9 @@ import Image from "next/image";
 
 interface Brands {
   id: number;
-  image: string;
+  image: {
+    url: string;
+  };
 }
 
 interface PopularBrandsProps {
@@ -29,7 +31,7 @@ const PopularBrands = ({ data }: PopularBrandsProps) => {
           return (
             <div className={styles.brands__card} key={itemData.id}>
               <Image
-                src={itemData.image}
+                src={itemData.image.url}
                 alt="image"
                 width={180}
                 height={124}

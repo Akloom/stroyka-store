@@ -7,8 +7,10 @@ import PopularProductCard from "./PopularProductsCard/PopularProductsCard";
 interface Product {
   id: number;
   description: string;
-  image: string;
-  price: string;
+  image: {
+    url: string;
+  };
+  price: number;
 }
 
 interface PopularProductsProps {

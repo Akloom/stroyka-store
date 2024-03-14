@@ -7,10 +7,11 @@ import { ArrowLinkIcon } from "@/components/Icons/Icons";
 interface Promotion {
   id: number;
   description: string;
-  image: string;
-  oldPrice: string;
-  newPrice: string;
-  discount: string;
+  image: {
+    url: string;
+  };
+  price: number;
+  discount: number;
 }
 
 interface PopularPromotionsProps {

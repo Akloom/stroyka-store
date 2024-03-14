@@ -15,7 +15,9 @@ interface Comments {
   name: string;
   description: string;
   date: string;
-  image: string;
+  image: {
+    url: string;
+  };
 }
 
 interface CommentsProps {
@@ -113,7 +115,7 @@ const Comments = ({ data }: CommentsProps) => {
                     <header className={styles.comments__cardHeading}>
                       <div className={styles.comments__cardAuthor}>
                         <Image
-                          src={`${itemData.image}`}
+                          src={`${itemData.image.url}`}
                           alt=""
                           width={52}
                           height={52}

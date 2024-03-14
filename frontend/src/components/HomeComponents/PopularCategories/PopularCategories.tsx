@@ -7,7 +7,9 @@ import PopularCategoriesCard from "./PopularCategoriesCard/PopularCategoriesCard
 interface Categories {
   id: number;
   title: string;
-  image: string;
+  image: {
+    url: string;
+  };
 }
 
 interface PopularCategoriesProps {

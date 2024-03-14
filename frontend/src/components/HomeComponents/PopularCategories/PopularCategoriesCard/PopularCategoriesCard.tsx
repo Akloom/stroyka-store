@@ -4,7 +4,9 @@ import styles from "./PopularCategoriesCard.module.scss";
 interface PopularCategoriesCardProps {
   data: {
     title: string;
-    image: string;
+    image: {
+      url: string;
+    };
   };
 }
 
@@ -13,7 +15,7 @@ const PopularCategoriesCard = ({ data }: PopularCategoriesCardProps) => {
     <div className={styles.card}>
       <div className={styles.card__title}>{data.title}</div>
       <div className={styles.card__image}>
-        <Image src={data.image} alt="image" width={278} height={208} />
+        <Image src={data.image.url} alt="image" width={278} height={208} />
       </div>
     </div>
   );
