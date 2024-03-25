@@ -18,7 +18,7 @@ const PopularPromotionsCard = ({ data }: PopularPromotionsCardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.card__image}>
-        <p className={styles.card__discount}>{data.discount}</p>
+        <p className={styles.card__discount}>-{data.discount}%</p>
         <Image src={data.image.url} alt="image" width={278} height={208} />
       </div>
       <div className={styles.card__content}>
