@@ -88,3 +88,12 @@ export const ArrowLinkIcon = () => {
     </svg>
   );
 };
+export const ArrowCatalog = () => {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M1 8H12.6667" stroke="#2F323A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M6.83301 2.1665L12.6663 7.99984L6.83301 13.8332" stroke="#2F323A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+   </svg>
+  
+  )
+}

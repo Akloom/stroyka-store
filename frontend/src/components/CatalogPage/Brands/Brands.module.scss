@@ -1,0 +1,19 @@
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 7px;
+}
+.link {
+    border: solid 1px #d1d1d3;
+    padding: 7px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #171b24;
+    transition: .3s ease-in;
+    font-weight: 600;
+}
+.link:hover {
+    background: yellow;
+}
