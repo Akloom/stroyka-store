@@ -10,7 +10,7 @@ import {
   IComments,
   IPopularProducts,
   IPopularPromotions,
-} from "../../../interfaces/popular";
+} from "../../interfaces/popular";
 import AboutCompany from "@/components/HomeComponents/AboutCompany/AboutCompany";
 
 interface HomePageProps {

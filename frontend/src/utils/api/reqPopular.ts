@@ -1,5 +1,5 @@
 import ky from "ky";
-import { IPopularBrands, IPopularCategories, IComments, IPopularProducts, IPopularPromotions } from "../../../interfaces/popular";
+import { IPopularBrands, IPopularCategories, IComments, IPopularProducts, IPopularPromotions } from "../../interfaces/popular";
 
 const strapi = ky.create({
   prefixUrl: `http://localhost:1337/api/`,

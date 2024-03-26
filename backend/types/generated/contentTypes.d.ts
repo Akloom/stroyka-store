@@ -827,6 +827,37 @@ export interface ApiCommentComment extends Schema.CollectionType {
   };
 }
 
+export interface ApiFaqItemFaqItem extends Schema.CollectionType {
+  collectionName: 'faq_items';
+  info: {
+    singularName: 'faq-item';
+    pluralName: 'faq-items';
+    displayName: '\u0427\u0417\u0412';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    question: Attribute.Text;
+    answer: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::faq-item.faq-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::faq-item.faq-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPopularBrandPopularBrand extends Schema.CollectionType {
   collectionName: 'popular_brands';
   info: {
@@ -981,6 +1012,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::comment.comment': ApiCommentComment;
+      'api::faq-item.faq-item': ApiFaqItemFaqItem;
       'api::popular-brand.popular-brand': ApiPopularBrandPopularBrand;
       'api::popular-category.popular-category': ApiPopularCategoryPopularCategory;
       'api::popular-product.popular-product': ApiPopularProductPopularProduct;

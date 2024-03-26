@@ -1,4 +1,5 @@
 import DeliveryPage from "@/pages/DeliveryPage/DeliveryPage";
+import { getFaq } from "@/utils/api/reqFaq";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,10 +7,12 @@ export const metadata: Metadata = {
   description: "Информация о доставке",
 };
 
-export default function Delivery() {
+export default async function Delivery() {
+  const faqData = await getFaq();
+
   return (
     <>
-      <DeliveryPage />
+      <DeliveryPage faqData={faqData.data} />
     </>
   );
 }
