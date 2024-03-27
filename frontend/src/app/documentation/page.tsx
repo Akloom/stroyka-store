@@ -1,3 +1,5 @@
+import DocumentationPage from "@/pages/DocumentationPage/DocumentationPage";
+import { getDocs } from "@/utils/api/reqDocs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,6 +7,12 @@ export const metadata: Metadata = {
   description: "Наша документация",
 };
 
-export default function Documentation() {
-  return <div>Page</div>;
+export default async function Documentation() {
+  const data = await getDocs();
+
+  return (
+    <div>
+      <DocumentationPage data={data.data} />
+    </div>
+  );
 }

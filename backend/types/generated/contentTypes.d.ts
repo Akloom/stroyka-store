@@ -827,6 +827,38 @@ export interface ApiCommentComment extends Schema.CollectionType {
   };
 }
 
+export interface ApiDocumentationDocumentation extends Schema.CollectionType {
+  collectionName: 'documentations';
+  info: {
+    singularName: 'documentation';
+    pluralName: 'documentations';
+    displayName: '\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    file: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::documentation.documentation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::documentation.documentation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFaqItemFaqItem extends Schema.CollectionType {
   collectionName: 'faq_items';
   info: {
@@ -1012,6 +1044,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::comment.comment': ApiCommentComment;
+      'api::documentation.documentation': ApiDocumentationDocumentation;
       'api::faq-item.faq-item': ApiFaqItemFaqItem;
       'api::popular-brand.popular-brand': ApiPopularBrandPopularBrand;
       'api::popular-category.popular-category': ApiPopularCategoryPopularCategory;

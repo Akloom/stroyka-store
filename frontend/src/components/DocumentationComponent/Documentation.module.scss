@@ -1,0 +1,97 @@
+@use "../../assets/scss/common/mixins" as mixin;
+
+.docs {
+  margin-top: 40px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    @media screen and (max-width: 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__card {
+    width: 100%;
+
+    &Heading {
+      position: relative;
+      width: 100%;
+      height: 208px;
+      object-fit: cover;
+    }
+
+    &Image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &Name {
+      position: absolute;
+      top: 62px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-left: -5px;
+
+      h5 {
+        max-width: 220px;
+        @include mixin.font(20px, 400, normal, var(--dark-blue-700));
+        text-align: center;
+
+        @media screen and (max-width: 480px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &Content {
+      padding: 16px;
+      border: 1px solid var(--light-gray-200);
+      @include mixin.flex(null, null, column, 16px);
+    }
+
+    &Info {
+      @include mixin.flex(null, null, column, 4px);
+    }
+
+    &Title {
+      @include mixin.font(18px, 700, normal, var(--dark-blue-700));
+
+      @media screen and (max-width: 480px) {
+        font-size: 14px;
+      }
+    }
+
+    &Text {
+      @include mixin.font(16px, 500, normal, var(--dark-blue-700));
+
+      @media screen and (max-width: 480px) {
+        font-size: 12px;
+      }
+    }
+
+    &Btn {
+      width: 100%;
+      @include mixin.flex(null, center, null, null);
+      @include mixin.button(12px, null, 1px solid var(--yellow), null, var(--yellow), 18px, 500, var(--dark-blue-800));
+      transition: .3s ease-in-out;
+
+      @media screen and (max-width: 480px) {
+        padding: 8px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}
