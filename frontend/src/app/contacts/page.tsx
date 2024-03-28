@@ -1,3 +1,4 @@
+import ContactsPage from "@/pages/ContactsPage/ContactsPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default function Contacts() {
-  return <div>Page</div>;
+  return (
+    <>
+      <ContactsPage />
+    </>
+  );
 }
