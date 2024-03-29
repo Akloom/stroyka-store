@@ -788,6 +788,39 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiBrandItemBrandItem extends Schema.CollectionType {
+  collectionName: 'brand_items';
+  info: {
+    singularName: 'brand-item';
+    pluralName: 'brand-items';
+    displayName: '\u0421\u043F\u0438\u0441\u043E\u043A \u0431\u0440\u0435\u043D\u0434\u043E\u0432';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    owner: Attribute.String & Attribute.Required;
+    info: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::brand-item.brand-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::brand-item.brand-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCommentComment extends Schema.CollectionType {
   collectionName: 'comments';
   info: {
@@ -1043,6 +1076,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::brand-item.brand-item': ApiBrandItemBrandItem;
       'api::comment.comment': ApiCommentComment;
       'api::documentation.documentation': ApiDocumentationDocumentation;
       'api::faq-item.faq-item': ApiFaqItemFaqItem;
