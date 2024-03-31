@@ -10,6 +10,8 @@ interface BrandsFilterProps {
 }
 
 const BrandsFilter = ({ data }: BrandsFilterProps) => {
+  const [selectedLetter, setSelectedLetter] = useState<string>("");
+
   const englishAlphabet = Array.from({ length: 26 }, (_, i) =>
     String.fromCharCode("a".charCodeAt(0) + i).toUpperCase()
   );
@@ -20,8 +22,6 @@ const BrandsFilter = ({ data }: BrandsFilterProps) => {
 
   const allAlphabet = [...englishAlphabet, ...russianAlphabet];
 
-  const [selectedLetter, setSelectedLetter] = useState<string>("");
-
   const filterByLetter = (letter: string) => {
     return data.filter((brand) =>
       brand.name.toLowerCase().startsWith(letter.toLowerCase())
@@ -29,7 +29,7 @@ const BrandsFilter = ({ data }: BrandsFilterProps) => {
   };
 
   const isLetterUsed = (letter: string) => {
-    return filterByLetter(letter).length > 0;
+    return filterByLetter(letter).some((brand) => !!brand.name);
   };
 
   const handleLetterClick = (letter: string) => {
@@ -39,49 +39,63 @@ const BrandsFilter = ({ data }: BrandsFilterProps) => {
   return (
     <div className={cn(styles.filter, "container")}>
       <div className={styles.filter__buttons}>
-        <button
-          className={styles.filter__btn}
-          onClick={() => setSelectedLetter("")}
-        >
-          Все
-        </button>
-        {allAlphabet.map((letter) => (
+        <div className={styles.filter__buttonsEng}>
           <button
-            key={letter}
-            className={cn(styles.filter__btn, {
-              [styles.active]: selectedLetter === letter,
+            className={cn(styles.filter__btnAll, {
+              [styles.active]: selectedLetter === "",
             })}
-            onClick={() => handleLetterClick(letter)}
+            onClick={() => setSelectedLetter("")}
           >
-            {letter}
+            Все
           </button>
-        ))}
+          {englishAlphabet.map((letter) =>
+            isLetterUsed(letter) ? (
+              <button
+                key={letter}
+                className={cn(styles.filter__btn, {
+                  [styles.active]: selectedLetter === letter,
+                })}
+                onClick={() => handleLetterClick(letter)}
+              >
+                {letter}
+              </button>
+            ) : null
+          )}
+        </div>
+        <div className={styles.filter__buttonsRus}>
+          {russianAlphabet.map((letter) =>
+            isLetterUsed(letter) ? (
+              <button
+                key={letter}
+                className={cn(styles.filter__btn, {
+                  [styles.active]: selectedLetter === letter,
+                })}
+                onClick={() => handleLetterClick(letter)}
+              >
+                {letter}
+              </button>
+            ) : null
+          )}
+        </div>
       </div>
       <ul className={styles.filter__list}>
-        {selectedLetter !== "" &&
-          filterByLetter(selectedLetter).length === 0 && (
-            <li className={styles.filter__listItem}>
-              <span className={styles.filter__error}>
-                На данную букву нет брендов
-              </span>
-            </li>
-          )}
-        {allAlphabet.map((letter) => (
-          <li className={styles.filter__listItem} key={letter}>
-            {selectedLetter === "" || selectedLetter === letter ? (
-              <>
-                {isLetterUsed(letter) && <span>{letter}</span>}
-                <div className="filter__listContent">
-                  {filterByLetter(letter).map((brand) => (
-                    <Link href={"#"} key={brand.id}>
-                      {brand.name}
-                    </Link>
-                  ))}
+        {(selectedLetter === "" ? allAlphabet : [selectedLetter]).map(
+          (letter) =>
+            isLetterUsed(letter) ? (
+              <li className={styles.filter__listItem} key={letter}>
+                <span className={styles.filter__listLetter}>{letter}</span>
+                <div className={styles.filter__listContent}>
+                  {filterByLetter(letter).map((brand) =>
+                    !!brand.name ? (
+                      <div className={styles.filter__listLink} key={brand.id}>
+                        <Link href={"#"}>{brand.name}</Link>
+                      </div>
+                    ) : null
+                  )}
                 </div>
-              </>
-            ) : null}
-          </li>
-        ))}
+              </li>
+            ) : null
+        )}
       </ul>
     </div>
   );
