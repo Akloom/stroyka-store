@@ -90,10 +90,37 @@ export const ArrowLinkIcon = () => {
 };
 export const ArrowCatalog = () => {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-   <path d="M1 8H12.6667" stroke="#2F323A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-   <path d="M6.83301 2.1665L12.6663 7.99984L6.83301 13.8332" stroke="#2F323A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-   </svg>
-  
-  )
-}
+    <svg
+      viewBox="0 0 16 16" >
+      <path
+        d="M1 8H12.6667"
+      />
+    </svg>
+  );
+};
+export const SearchSidebar = () => {
+  return (
+    <svg 
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+        stroke="#5D6066"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M20.9999 20.9999L16.6499 16.6499"
+        stroke="#5D6066"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};

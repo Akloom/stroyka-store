@@ -1029,12 +1029,51 @@ export interface ApiPopularPromotionPopularPromotion
   };
 }
 
+export interface ApiProductProduct extends Schema.CollectionType {
+  collectionName: 'products';
+  info: {
+    singularName: 'product';
+    pluralName: 'products';
+    displayName: '\u0422\u043E\u0432\u0430\u0440\u044B';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    Price: Attribute.Integer;
+    Image: Attribute.Media;
+    subcategories: Attribute.Relation<
+      'api::product.product',
+      'manyToOne',
+      'api::subcategory.subcategory'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSubcategorySubcategory extends Schema.CollectionType {
   collectionName: 'subcategories';
   info: {
     singularName: 'subcategory';
     pluralName: 'subcategories';
     displayName: '\u041F\u043E\u0434\u043A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u0438';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1045,6 +1084,11 @@ export interface ApiSubcategorySubcategory extends Schema.CollectionType {
       'api::subcategory.subcategory',
       'manyToOne',
       'api::category.category'
+    >;
+    products: Attribute.Relation<
+      'api::subcategory.subcategory',
+      'oneToMany',
+      'api::product.product'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1089,6 +1133,7 @@ declare module '@strapi/types' {
       'api::popular-category.popular-category': ApiPopularCategoryPopularCategory;
       'api::popular-product.popular-product': ApiPopularProductPopularProduct;
       'api::popular-promotion.popular-promotion': ApiPopularPromotionPopularPromotion;
+      'api::product.product': ApiProductProduct;
       'api::subcategory.subcategory': ApiSubcategorySubcategory;
     }
   }

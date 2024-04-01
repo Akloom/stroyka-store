@@ -1,0 +1,24 @@
+.sidebar {
+    border: 1px solid grey;
+    width: 278px;
+}
+.inputs {
+    display: flex;
+    gap: 10px;
+    
+}
+.sidebar__price{
+    width: 100px;
+    height: 30px;
+    background: #f6f6f6;
+    box-shadow: 5px 10px -2px black;
+    text-align: center;
+}
+.search{
+    background: #f6f6f6;
+    width: 246px;
+    height: 48px;
+}
+.sidebar__input {
+    position: relative;
+}

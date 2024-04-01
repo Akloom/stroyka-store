@@ -4,7 +4,8 @@
   "info": {
     "singularName": "subcategory",
     "pluralName": "subcategories",
-    "displayName": "Подкатегории"
+    "displayName": "Подкатегории",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,12 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "subcategories"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "subcategories"
     }
   }
 }
