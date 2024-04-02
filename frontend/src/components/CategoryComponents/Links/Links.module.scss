@@ -5,4 +5,7 @@
 .card__link {
     text-decoration: none;
     color: #8b8d92;
+    transition: .5s;
+}.card__link:hover {
+    color: #171b24;
 }

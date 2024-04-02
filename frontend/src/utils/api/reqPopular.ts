@@ -41,6 +41,6 @@ export const fatchSubCategoryCardList = (): Promise<SubCategoryResponse > => {
 export const fatchCategoryPageList = (id: number): Promise<CardCategoryResponse> => {
   return strapi.get(`subcategories/${id}/?populate[products][populate]=Image`).json();
 };
-export const fatchBrandSidebarList = (id: number): Promise<SidebarBrandsResponse> => {
-  return strapi.get(`subcategories/${id}/?populate[products][populate]`).json();
+export const fatchBrandSidebarList = (): Promise<SidebarBrandsResponse> => {
+  return strapi.get(`brands`).json();
 };

@@ -7,7 +7,6 @@ import { fatchCategoryCardList } from "@/utils/api/reqPopular"
 import { Metadata } from "next";
 
 export const revalidate = 10
-
 export const metadata: Metadata = {
   title: "Каталог | Stroyka Store",
   description: "Каталог наших товаров",
@@ -20,6 +19,7 @@ export default async function Catalog() {
   // const subcategoryList = await fatchSubCategoryCardList()
   return (
     <div>
+    
     <Banner />
     <BrandsShop list={brandsList.data}/>
     <CardShop list={categoryCardList.data} />

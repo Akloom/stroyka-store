@@ -1,5 +1,9 @@
+.parent {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
 .sidebar {
-    border: 1px solid grey;
+    border: 2px solid #f6f6f6;
     width: 278px;
 }
 .inputs {
@@ -21,4 +25,46 @@
 }
 .sidebar__input {
     position: relative;
+}
+.brandItem {
+    display: block;
+    
+}
+.brand {
+    margin-top: 10px;
+    overflow: scroll;
+    height: 140px;
+    
+}
+.sidebar__buttons {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid #f6f6f6;
+
+}
+.enter {
+    width: 246px;
+    height: 48px;
+    background: yellow;
+    font-size: 18px;
+    transition: .5s;
+
+}
+.delete {
+    width: 246px;
+    height: 48px;
+    background: white;
+    border: 1px solid grey;
+    font-size: 18px;
+    transition: .5s;
+}
+.enter:hover {
+    background: #000;
+    color: white;
+}
+.delete:hover {
+    background: #000;
+    color: white;
 }
