@@ -18,11 +18,13 @@
     },
     "owner": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "."
     },
     "info": {
       "type": "text",
-      "required": true
+      "required": true,
+      "default": "."
     }
   }
 }

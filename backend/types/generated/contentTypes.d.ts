@@ -801,8 +801,8 @@ export interface ApiBrandItemBrandItem extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
-    owner: Attribute.String & Attribute.Required;
-    info: Attribute.Text & Attribute.Required;
+    owner: Attribute.String & Attribute.Required & Attribute.DefaultTo<'.'>;
+    info: Attribute.Text & Attribute.Required & Attribute.DefaultTo<'.'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
