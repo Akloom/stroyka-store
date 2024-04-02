@@ -90,17 +90,14 @@ export const ArrowLinkIcon = () => {
 };
 export const ArrowCatalog = () => {
   return (
-    <svg
-      viewBox="0 0 16 16" >
-      <path
-        d="M1 8H12.6667"
-      />
+    <svg viewBox="0 0 16 16">
+      <path d="M1 8H12.6667" />
     </svg>
   );
 };
 export const SearchSidebar = () => {
   return (
-    <svg 
+    <svg
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -121,6 +118,14 @@ export const SearchSidebar = () => {
         stroke-linecap="round"
         stroke-linejoin="round"
       />
+    </svg>
+  );
+};
+
+export const ArrowBottomIcon = () => {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 9L12 15L18 9" />
     </svg>
   );
 };

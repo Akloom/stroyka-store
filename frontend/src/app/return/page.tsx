@@ -1,3 +1,4 @@
+import ReturnPage from "@/pages/ReturnPage/ReturnPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default function Return() {
-  return <div>Page</div>;
+  return (
+    <div>
+      <ReturnPage />
+    </div>
+  );
 }

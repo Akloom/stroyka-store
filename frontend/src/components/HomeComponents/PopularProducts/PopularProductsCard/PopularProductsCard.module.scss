@@ -43,6 +43,7 @@
     transition: .3s ease-in;
 
     &:hover {
+      border-color: var(--dark-blue-800);
       background: var(--dark-blue-800);
       color: var(--white);
     }

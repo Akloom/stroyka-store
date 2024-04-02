@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brand_items",
+  "info": {
+    "singularName": "brand-item",
+    "pluralName": "brand-items",
+    "displayName": "Список брендов",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "owner": {
+      "type": "string",
+      "required": true,
+      "default": "."
+    },
+    "info": {
+      "type": "text",
+      "required": true,
+      "default": "."
+    }
+  }
+}

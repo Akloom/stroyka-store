@@ -18,9 +18,9 @@ const PopularProductsCard = ({ data }: PopularProductsCardProps) => {
         <Image
           src={data.image.url}
           alt="image"
-          width={278}
-          height={208}
-          style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          fill
+          sizes="100%"
+          style={{ objectFit: "contain" }}
         />
       </div>
       <div className={styles.card__content}>

@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  @include container(1160px);
+  @include container(1180px);
   padding: 0 10px;
 
   @media screen and (max-width: 768px) {

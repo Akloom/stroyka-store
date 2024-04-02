@@ -10,7 +10,8 @@ import {
   IComments,
   IPopularProducts,
   IPopularPromotions,
-} from "../../../interfaces/popular";
+} from "../../interfaces/popular";
+import AboutCompany from "@/components/HomeComponents/AboutCompany/AboutCompany";
 
 interface HomePageProps {
   promotions: IPopularPromotions;
@@ -41,6 +42,7 @@ const HomePage = ({
       <PopularProducts data={productsData.data} />
       <PopularBrands data={brandsData.data} />
       <Comments data={commentsData.data} />
+      <AboutCompany />
     </>
   );
 };

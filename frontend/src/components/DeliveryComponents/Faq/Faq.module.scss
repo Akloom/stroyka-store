@@ -1,0 +1,89 @@
+@use "../../../assets/scss/common/mixins" as mixin;
+
+.faq {
+  margin-top: 80px;
+  padding: 80px 20px;
+  width: 100%;
+  border: 1px solid var(--gray);
+
+  @media screen and (max-width: 768px) {
+    margin-top: 40px;
+    padding: 40px 10px;
+  }
+
+  &__content {
+    @include mixin.container(768px);
+    @include mixin.flex(null, null, column, 20px);
+  }
+
+  &__title {
+    @include mixin.font(34px, 600, normal, var(--dark-blue-700));
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    @include mixin.flex(null, null, column, 12px);
+
+    &Item {
+      background: var(--light-gray);
+      @include mixin.flex(null, null, column, null);
+    }
+
+    &Question {
+      padding: 16px 20px;
+      cursor: pointer;
+      @include mixin.flex(center, space-between, null, 10px);
+
+      @media screen and (max-width: 480px) {
+        padding: 10px 12px;
+      }
+
+      svg {
+        min-width: 24px;
+        height: 24px;
+        stroke-width: 2px;
+        stroke: var(--dark-blue-500);
+        transition: .3s ease-in-out;
+      }
+    }
+
+    &Title {
+      @include mixin.font(18px, 500, normal, var(--dark-blue-700));
+
+      @media screen and (max-width: 480px) {
+        font-size: 14px;
+      }
+    }
+
+    &Answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s ease-in-out;
+    }
+
+    &Desc {
+      padding: 0 20px 16px 20px;
+      @include mixin.font(16px, 400, normal, var(--dark-blue-700));
+
+      @media screen and (max-width: 480px) {
+        padding: 0 12px 10px 12px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.faq__listAnswer.active {
+  max-height: 300px;
+}
+
+.faq__listQuestion.active svg {
+  transform: scale(1, -1);
+}

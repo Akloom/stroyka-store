@@ -823,6 +823,39 @@ export interface ApiBrandBrand extends Schema.CollectionType {
   };
 }
 
+export interface ApiBrandItemBrandItem extends Schema.CollectionType {
+  collectionName: 'brand_items';
+  info: {
+    singularName: 'brand-item';
+    pluralName: 'brand-items';
+    displayName: '\u0421\u043F\u0438\u0441\u043E\u043A \u0431\u0440\u0435\u043D\u0434\u043E\u0432';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    owner: Attribute.String & Attribute.Required & Attribute.DefaultTo<'.'>;
+    info: Attribute.Text & Attribute.Required & Attribute.DefaultTo<'.'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::brand-item.brand-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::brand-item.brand-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCategoryCategory extends Schema.CollectionType {
   collectionName: 'categories';
   info: {
@@ -892,6 +925,69 @@ export interface ApiCommentComment extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDocumentationDocumentation extends Schema.CollectionType {
+  collectionName: 'documentations';
+  info: {
+    singularName: 'documentation';
+    pluralName: 'documentations';
+    displayName: '\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    file: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::documentation.documentation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::documentation.documentation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqItemFaqItem extends Schema.CollectionType {
+  collectionName: 'faq_items';
+  info: {
+    singularName: 'faq-item';
+    pluralName: 'faq-items';
+    displayName: '\u0427\u0417\u0412';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    question: Attribute.Text;
+    answer: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::faq-item.faq-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::faq-item.faq-item',
       'oneToOne',
       'admin::user'
     > &
@@ -1137,8 +1233,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::brand.brand': ApiBrandBrand;
+      'api::brand-item.brand-item': ApiBrandItemBrandItem;
       'api::category.category': ApiCategoryCategory;
       'api::comment.comment': ApiCommentComment;
+      'api::documentation.documentation': ApiDocumentationDocumentation;
+      'api::faq-item.faq-item': ApiFaqItemFaqItem;
       'api::popular-brand.popular-brand': ApiPopularBrandPopularBrand;
       'api::popular-category.popular-category': ApiPopularCategoryPopularCategory;
       'api::popular-product.popular-product': ApiPopularProductPopularProduct;

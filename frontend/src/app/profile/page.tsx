@@ -1,3 +1,4 @@
+import WithoutDesign from "@/components/WithoutDesign/WithoutDesign";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default function Profile() {
-  return <div>Page</div>;
+  return (
+    <>
+      <WithoutDesign />
+    </>
+  );
 }
