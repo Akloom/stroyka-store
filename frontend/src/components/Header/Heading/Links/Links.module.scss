@@ -1,0 +1,52 @@
+@use '../../../../assets/scss/common/mixins' as mixin;
+
+.link {
+  width: max-content;
+  @include mixin.flex(center, null, column, 2px);
+  text-decoration: none;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2px;
+    stroke: var(--dark-blue-600);
+    transition: .3s ease-in;
+  }
+
+  span {
+    @include mixin.link(15px, 500, var(--dark-blue-600));
+    transition: .3s ease-in;
+  }
+}
+
+.link:hover {
+  svg {
+    stroke: var(--yellow);
+  }
+
+  span {
+    color: var(--yellow);
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .link {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    span {
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .link {
+
+    span {
+      display: none;
+    }
+  }
+}

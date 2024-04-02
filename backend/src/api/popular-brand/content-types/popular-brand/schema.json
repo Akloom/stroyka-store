@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "popular_brands",
+  "info": {
+    "singularName": "popular-brand",
+    "pluralName": "popular-brands",
+    "displayName": "Популярные бренды"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

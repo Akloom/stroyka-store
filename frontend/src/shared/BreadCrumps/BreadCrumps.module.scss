@@ -1,0 +1,74 @@
+@use "../../assets/scss/common/mixins" as mixin;
+
+.breadcrumps {
+  max-width: 1360px;
+  margin: 40px auto 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+  }
+
+  &__content {
+    padding: 40px 100px;
+    @include mixin.flex(null, null, column, 20px);
+
+    @media screen and (max-width: 1000px) {
+      padding: 40px 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 20px 20px;
+      gap: 10px;
+    }
+  }
+
+  &__nav {
+    @include mixin.flex(center, null, null, 5px);
+
+    &Item {
+      @include mixin.flex(center, null, null, 5px)
+    }
+  }
+
+  &__link {
+    @include mixin.link(16px, 400, var(--dark-blue-600));
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+    }
+  }
+
+  &__title {
+    @include mixin.font(48px, 700, normal, var(--dark-blue-800));
+
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 28px;
+    }
+  }
+
+  &__desc {
+    max-width: 520px;
+    @include mixin.font(20px, 400, normal, var(--dark-blue-700));
+
+    @media screen and (max-width: 768px) {
+      max-width: 420px;
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 480px) {
+      max-width: 320px;
+      font-size: 14px;
+    }
+  }
+}

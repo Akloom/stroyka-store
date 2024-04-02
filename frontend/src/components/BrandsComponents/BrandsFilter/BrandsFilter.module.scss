@@ -1,0 +1,148 @@
+@use "../../../assets/scss/common/mixins" as mixin;
+
+.filter {
+  margin-top: 80px;
+  @include mixin.flex(null, null, column, 26px);
+
+  &__buttons {
+    @include mixin.flex(null, null, column, 6px);
+
+    &Eng {
+      @include mixin.flex(center, null, null, 8px);
+      overflow-x: auto;
+      padding-bottom: 2px;
+
+      &::-webkit-scrollbar {
+        height: 2px;
+      }
+
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--yellow);
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: var(--yellow);
+      }
+    }
+
+    &Rus {
+      @include mixin.flex(center, null, null, 8px);
+      overflow-x: auto;
+      padding-bottom: 2px;
+
+      &::-webkit-scrollbar {
+        height: 2px;
+      }
+
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--yellow);
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: var(--yellow);
+      }
+    }
+  }
+
+  &__btn {
+    @include mixin.button(4px 12px, null, 1px solid var(--gray), null, transparent, 18px, 500, var(--dark-blue-800));
+    transition: .3s ease-in-out;
+
+    &:hover {
+      background: var(--yellow);
+      border-color: var(--dark-yellow)
+    }
+
+    @media screen and (max-width: 480px) {
+      padding: 3px 8px;
+      font-size: 16px;
+    }
+  }
+
+  &__btnAll {
+    @include mixin.button(4px 14px, null, 1px solid var(--gray), null, transparent, 18px, 500, var(--dark-blue-800));
+    transition: .3s ease-in-out;
+
+    &:hover {
+      background: var(--yellow);
+      border-color: var(--dark-yellow)
+    }
+
+    @media screen and (max-width: 480px) {
+      padding: 3px 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    @include mixin.flex(null, null, column, 28px);
+
+    &Item {
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--light-gray-200);
+      @include mixin.flex(start, null, null, 16px);
+    }
+
+    &Letter {
+      min-width: 180px;
+      @include mixin.font(34px, 600, normal, #333333);
+
+      @media screen and (max-width: 1000px) {
+        min-width: 120px;
+      }
+
+      @media screen and (max-width: 768px) {
+        min-width: 100px;
+        font-size: 28px;
+      }
+
+      @media screen and (max-width: 480px) {
+        min-width: 60px;
+        font-size: 24px;
+      }
+    }
+
+    &Content {
+      @include mixin.flex(center, null, null, 12px);
+      flex-wrap: wrap;
+    }
+
+    &Link {
+      min-width: 180px;
+
+      @media screen and (max-width: 1000px) {
+        min-width: 120px;
+      }
+
+      @media screen and (max-width: 768px) {
+        min-width: 100px;
+      }
+
+      @media screen and (max-width: 480px) {
+        min-width: 80px;
+      }
+
+      a {
+        @include mixin.link(16px, 500, var(--dark-blue-700));
+        transition: .3s ease-in-out;
+
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: 480px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  background: var(--yellow);
+  border-color: var(--dark-yellow)
+}

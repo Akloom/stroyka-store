@@ -1,0 +1,14 @@
+@use '../../../../assets/scss/common/mixins' as mixin;
+
+.link {
+  @include mixin.link(15px, 500, var(--dark-blue-500));
+  transition: .3s ease-in;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  &:hover {
+    color: var(--dark-blue-800);
+  }
+}

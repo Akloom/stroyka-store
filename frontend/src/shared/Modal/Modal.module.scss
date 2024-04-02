@@ -1,0 +1,59 @@
+@use '../../assets/scss/common/mixins' as mixin;
+
+.modal {
+  max-width: 672px;
+  width: 100%;
+  height: 400px;
+  @include mixin.position(fixed, 23%, 0, 0, 0);
+  margin: 0 auto;
+  z-index: 99999;
+  background: #fff;
+  box-shadow: 0 0 10px -6px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  visibility: hidden;
+  animation: customAni .4s ease-in-out 0s normal none;
+
+
+  &__body {
+    padding: 36px;
+    height: 100%;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--yellow);
+      border-radius: 4px;
+    }
+  }
+
+  &__title {
+    @include mixin.font(34px, 600, normal, var(--dark-blue-700));
+    text-align: center;
+    white-space: nowrap;
+
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 468px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.show {
+  visibility: visible;
+}
+
+@keyframes customAni {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

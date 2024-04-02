@@ -1,0 +1,27 @@
+* {
+  @include reset-all-styles;
+}
+
+body {
+  font-family: var(--font-manrope), sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+    border-radius: 4px;
+  }
+}
+
+.container {
+  @include container(1180px);
+  padding: 0 10px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
