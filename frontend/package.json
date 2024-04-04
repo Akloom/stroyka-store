@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@strapi/blocks-react-renderer": "^1.0.1",
     "clsx": "^2.1.0",
     "ky": "^1.2.2",
     "next": "latest",

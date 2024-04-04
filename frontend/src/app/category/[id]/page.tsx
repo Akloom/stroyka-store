@@ -24,8 +24,7 @@ export default async function Category({ params: { id } }: RequestType) {
   const cardShopCategory = await fatchCategoryPageList(+id);
   const SidebarBrand = await fatchBrandSidebarList();
   return (
-    <div>
-      <h1>Sub cat page</h1>
+    <div>    
       <div className={styles.parent}>
         <SidebarCategory list={SidebarBrand.data} />
         <main className={styles.main}>

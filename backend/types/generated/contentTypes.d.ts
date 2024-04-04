@@ -1155,6 +1155,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToOne',
       'api::brand.brand'
     >;
+    content: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

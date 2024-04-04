@@ -6,5 +6,11 @@ export const metadata: Metadata = {
 };
 
 export default function Cart() {
-  return <div>Page</div>;
+ 
+  return (
+
+    <div>
+
+    </div>
+  )
 }

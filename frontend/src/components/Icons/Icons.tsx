@@ -129,3 +129,75 @@ export const ArrowBottomIcon = () => {
     </svg>
   );
 };
+export const TruckProductPage = () => {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 3H1V16H16V3Z" stroke="#5D6066" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 8H20L23 11V16H16V8Z" stroke="#5D6066" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.5 21C6.88071 21 8 19.8807 8 18.5C8 17.1193 6.88071 16 5.5 16C4.11929 16 3 17.1193 3 18.5C3 19.8807 4.11929 21 5.5 21Z" stroke="#5D6066" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.5 21C19.8807 21 21 19.8807 21 18.5C21 17.1193 19.8807 16 18.5 16C17.1193 16 16 17.1193 16 18.5C16 19.8807 17.1193 21 18.5 21Z" stroke="#5D6066" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  )
+}
+export const ProductPlus = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 5V19"
+        stroke="#454950"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M5 12H19"
+        stroke="#454950"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const ProductMinus = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 12H19"
+        stroke="#454950"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const InStock = () => {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2_12694)">
+<path d="M14.6668 7.38674V8.00007C14.666 9.43769 14.2005 10.8365 13.3397 11.988C12.4789 13.1394 11.269 13.9817 9.8904 14.3893C8.51178 14.797 7.03834 14.748 5.68981 14.2498C4.34128 13.7516 3.18993 12.8308 2.40747 11.6248C1.62501 10.4188 1.25336 8.99211 1.34795 7.55761C1.44254 6.12311 1.9983 4.75762 2.93235 3.66479C3.8664 2.57195 5.12869 1.81033 6.53096 1.4935C7.93322 1.17668 9.40034 1.32163 10.7135 1.90674" stroke="#3BAA35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.6667 2.6665L8 9.33984L6 7.33984" stroke="#3BAA35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_2_12694">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+  )
+}
