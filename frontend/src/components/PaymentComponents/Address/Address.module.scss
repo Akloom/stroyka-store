@@ -1,0 +1,38 @@
+.address_payment {
+    border: 2px solid #f6f6f6;
+    width: 866px;
+    height: 788px;
+}
+.pay_heading {
+    font-size: 34px;
+    padding: 10px;
+}
+.form_payment {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    gap: 20px;
+    
+}
+.input_form {
+    background: #f6f6f6;
+    width: 389px;
+    height: 48px;
+    padding-left: 10px;
+} 
+.input_ll {
+    width: 186.5px;
+    height: 48px;
+    background: #f6f6f6;
+    padding-left: 10px;
+}
+.mesarea {
+    width: 794px;
+    height: 200px;
+    background: #f6f6f6;
+}
+li {
+    padding-bottom: 10px;
+    font-weight: 700;
+}

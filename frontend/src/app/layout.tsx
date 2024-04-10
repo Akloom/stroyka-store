@@ -4,6 +4,7 @@ import "./global.scss";
 import { Suspense } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import StoreProvider from "@/providers/StoreProvider";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -22,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <Header />
-        <Suspense fallback="loading">{children}</Suspense>
-        <Footer />
+        <StoreProvider>
+          <Header />
+          <Suspense fallback="loading">{children}</Suspense>
+          <Footer />
+        </StoreProvider>
       </body>
     </html>
   );

@@ -8,6 +8,7 @@ import {
 import { Metadata } from "next";
 import styles from "./Aside.module.scss";
 
+
 export const metadata: Metadata = {
   title: "Категория | Stroyka Store",
   description: "Страница с категориями товара",

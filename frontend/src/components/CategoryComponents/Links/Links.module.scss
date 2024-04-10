@@ -8,4 +8,52 @@
     transition: .5s;
 }.card__link:hover {
     color: #171b24;
+
+}
+@media screen and (max-width: 972px){
+    .card__links {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 200px;
+       
+    }
+    .card__link {
+        text-decoration: none;
+        color: #8b8d92;
+        transition: .5s;
+    }.card__link:hover {
+        color: #171b24;
+    
+    }
+   }
+    
+
+@media screen and (max-width: 768px){
+    .card__links {
+        display: flex;
+        gap: 10px;
+    }
+    .card__link {
+        text-decoration: none;
+        color: #8b8d92;
+        transition: .5s;
+    }.card__link:hover {
+        color: #171b24;
+    
+    }
+}
+@media screen and (max-width: 768px){
+    .card__links {
+        display: flex;
+        gap: 10px;
+    }
+    .card__link {
+        text-decoration: none;
+        color: #8b8d92;
+        transition: .5s;
+    }.card__link:hover {
+        color: #171b24;
+    
+    }
+    
 }

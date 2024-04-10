@@ -5,7 +5,7 @@ import { ArrowLinkIcon } from "@/components/Icons/Icons";
 import PopularProductCard from "./PopularProductsCard/PopularProductsCard";
 
 interface Product {
-  id: number;
+  id: string;
   description: string;
   image: {
     url: string;

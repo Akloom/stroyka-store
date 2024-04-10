@@ -2,9 +2,9 @@ import ky from "ky";
 import { IPopularBrands, IPopularCategories, IComments, IPopularProducts, IPopularPromotions } from "../../../interfaces/popular";
 import { BrandsResponse, SidebarBrandsResponse } from "../../../interfaces/brands";
 import {  CardCategoryResponse, CategoriesResponse } from "../../../interfaces/category";
-import { SubCategoryResponse } from "../../../interfaces/subcategory";
+import { SubCategoryResponse } from "../../../interfaces/Subcategory";
 
-const strapi = ky.create({
+const strapi = ky.create({  
   prefixUrl: `http://localhost:1337/api/`,
 });
 

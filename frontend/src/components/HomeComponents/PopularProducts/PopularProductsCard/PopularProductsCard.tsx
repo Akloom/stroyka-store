@@ -1,8 +1,16 @@
+"use client"
 import Image from "next/image";
 import styles from "./PopularProductsCard.module.scss";
+import { useRouter } from "next/navigation";
+
+
+
+
 
 interface PopularProductsCardProps {
+  
   data: {
+    id: string;
     description: string;
     image: {
       url: string;
@@ -12,6 +20,7 @@ interface PopularProductsCardProps {
 }
 
 const PopularProductsCard = ({ data }: PopularProductsCardProps) => {
+ const router = useRouter()
   return (
     <div className={styles.card}>
       <div className={styles.card__image}>
@@ -24,7 +33,7 @@ const PopularProductsCard = ({ data }: PopularProductsCardProps) => {
         />
       </div>
       <div className={styles.card__content}>
-        <p className={styles.card__desc}>{data.description}</p>
+        <p className={styles.card__desc} onClick={() => router.push(`/product/${data.id}`)}>{data.description}</p>
         <div className={styles.card__actions}>
           <span className={styles.card__price}>{data.price}₽</span>
           <button className={styles.card__button}>В корзину</button>

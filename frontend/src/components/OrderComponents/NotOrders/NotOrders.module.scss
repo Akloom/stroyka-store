@@ -1,0 +1,24 @@
+.NotOrders {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 450px;
+    font-size: 34px;
+    font-weight: 700;   
+    text-align: center;
+    height: 100%;
+}
+@media screen and (max-width:972px){
+    .NotOrders {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 450px;
+        font-size: 28px;
+        font-weight: 700;   
+        text-align: center;
+        height: 100%;
+    }   
+}

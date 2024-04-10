@@ -1,4 +1,5 @@
-import NotFoundPage from "@/components/NotFoundPage/NotFoundPage";
+
+import ErrorPage from "@/components/PaymentComponents/404/Error404";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const NotFound = () => {
-  return <NotFoundPage />;
+  return <ErrorPage />;
 };
 
 export default NotFound;

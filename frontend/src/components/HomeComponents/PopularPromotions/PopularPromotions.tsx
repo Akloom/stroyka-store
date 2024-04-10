@@ -19,6 +19,8 @@ interface PopularPromotionsProps {
 }
 
 const PopularPromotions = ({ data }: PopularPromotionsProps) => {
+  
+  
   return (
     <div className={cn(styles.promotions, "container")}>
       <div className={styles.promotions__heading}>
@@ -35,6 +37,7 @@ const PopularPromotions = ({ data }: PopularPromotionsProps) => {
         })}
       </div>
     </div>
+    
   );
 };
 

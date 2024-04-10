@@ -9,7 +9,12 @@ export interface ProductInfo extends Published {
         url: string;
       }; 
 }
+
 export interface ProductResponse {
     data: ProductInfo;
-    meta: Meta;
-}
+    meta: Meta
+    };
+    
+
+
+ 
