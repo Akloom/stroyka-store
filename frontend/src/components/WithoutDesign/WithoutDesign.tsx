@@ -9,7 +9,7 @@ const WithoutDesign = () => {
       </h1>
       <div className={styles.withoutDesign__content}>
         <p className={styles.withoutDesign__desc}>
-          Разработчик Akloom приносит свои извинения, но на данной странице не
+          Разработчик Akloom и Keomav приносит свои извинения, но на данной странице не
           было дизайна, поэтому она не сделана
         </p>
         <Link href="/" className={styles.withoutDesign__link}>

@@ -1,4 +1,6 @@
-import WithoutDesign from "@/components/WithoutDesign/WithoutDesign";
+
+
+import ProfilePage from "@/pages/ProfilePage/ProfilePage/ProfilePage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,7 +11,7 @@ export const metadata: Metadata = {
 export default function Profile() {
   return (
     <>
-      <WithoutDesign />
+      <ProfilePage />
     </>
   );
 }

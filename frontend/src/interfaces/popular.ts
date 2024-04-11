@@ -18,6 +18,7 @@ export interface Category {
     url: string;
   };
 }
+
 export interface IPopularCategories {
   data: Category[];
 }
