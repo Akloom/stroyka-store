@@ -19,18 +19,52 @@
     font-weight: 400;
 }
 @media screen  and (max-width: 1400px) {
+    .bannerCatalog {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+    .h1 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .h4 {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+    }
     .bannerCatalog img {
         width: 1320px;
         height: 203px;
     }
     .title {
         position: absolute;
-        bottom: 70%;
+        bottom: 75%;
         left: 10%;
       
     }
 }
 @media screen  and (max-width: 1200px) {
+    .title {
+        position: absolute;
+        
+        bottom: 76%;
+        left: 10%;
+      
+    }
+    .h1 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .h4 {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+    }
     .bannerCatalog img {
         width: 1100px;
         height: 170px;
@@ -41,12 +75,45 @@
         width: 900px;
         height: 150px;
     }
+    .title {
+        position: absolute;
+        
+        bottom: 78%;
+        left: 10%;
+      
+    }
+    .h1 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+    .h4 {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+    }
 }
-
 
 @media screen  and (max-width: 460px) {
     .bannerCatalog img {
         width: 400px;
         height: 120px;
+    }
+    .h1 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .h4 {
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .title {
+        position: absolute;
+        bottom: 73%;
+        left: 10%;
+      
     }
 }

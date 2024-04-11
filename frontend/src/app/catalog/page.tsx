@@ -1,4 +1,5 @@
 
+import List from "@/components/CartComponents/List/List";
 import Banner from "@/components/CatalogPage/Banner/Banner";
 import BrandsShop from "@/components/CatalogPage/Brands/Brands";
 import CardShop from "@/components/CatalogPage/Card/Card";
@@ -19,7 +20,7 @@ export default async function Catalog() {
   // const subcategoryList = await fatchSubCategoryCardList()
   return (
     <div>
-    
+
     <Banner />
     <BrandsShop list={brandsList.data}/>
     <CardShop list={categoryCardList.data} />

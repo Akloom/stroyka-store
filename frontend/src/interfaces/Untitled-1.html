@@ -1,0 +1,14 @@
+<div class="parent">
+    <SidebarCategory list={SidebarBrand.data}/>
+    <div class="main">
+        <CategoryLinks />
+    <CategoryCardShop list={cardShopCategory.data.products} />
+    </div>
+</div>
+
+<style>
+    .parent {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+    }
+</style>

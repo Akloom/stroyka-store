@@ -40,6 +40,9 @@
       "relation": "manyToOne",
       "target": "api::brand.brand",
       "inversedBy": "products"
+    },
+    "content": {
+      "type": "blocks"
     }
   }
 }

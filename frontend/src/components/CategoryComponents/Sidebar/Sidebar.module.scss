@@ -1,10 +1,10 @@
-.parent {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-}
+
 .sidebar {
     border: 2px solid #f6f6f6;
     width: 278px;
+    height: 320px;
+ 
+    
 }
 .inputs {
     display: flex;
@@ -20,8 +20,15 @@
 }
 .search{
     background: #f6f6f6;
-    width: 246px;
+    width: 275px;
     height: 48px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.seacrh_icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 .sidebar__input {
     position: relative;
@@ -68,3 +75,146 @@
     background: #000;
     color: white;
 }
+@media screen  and (max-width: 1000px) {
+   .sidebar {
+    border: 2px solid #f6f6f6;
+    width: 230px; 
+}
+.inputs {
+    display: flex;
+    gap: 10px;
+    
+}
+.sidebar__price{
+    width: 80px;
+    height: 30px;
+    background: #f6f6f6;
+    box-shadow: 5px 10px -2px black;
+    text-align: center;
+}
+.search{
+    background: #f6f6f6;
+    width: 200px;
+    height: 40px;
+}
+.sidebar__input {
+    position: relative;
+}
+.brandItem {
+    display: block;
+    
+}
+.brand {
+    margin-top: 10px;
+    overflow: scroll;
+    height: 100px;
+    
+}
+.sidebar__buttons {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid #f6f6f6;
+
+}
+.enter {
+    width: 220px;
+    height: 40px;
+    background: yellow;
+    font-size: 18px;
+    transition: .5s;
+
+}
+.delete {
+    width: 220px;
+    height: 40px;
+    background: white;
+    border: 1px solid grey;
+    font-size: 18px;
+    transition: .5s;
+}
+.enter:hover {
+    background: #000;
+    color: white;
+}
+.delete:hover {
+    background: #000;
+    color: white;
+}
+}
+@media screen  and (max-width: 768px) {
+    .sidebar {
+     border: 2px solid #f6f6f6;
+     width: 150px; 
+ }
+ .inputs {
+     display: flex;
+     gap: 10px;
+     
+ }
+ .sidebar__price{
+     width: 60px;
+     height: 30px;
+     background: #f6f6f6;
+     box-shadow: 5px 10px -2px black;
+     text-align: center;
+ }
+ .search{
+     background: #f6f6f6;
+     width: 150px;
+     height: 30px;
+ }
+ .sidebar__input {
+     position: relative;
+ }
+ .seacrh_icon {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+ .brandItem {
+     display: block;
+     
+ }
+ .brand {
+     margin-top: 10px;
+     overflow: scroll;
+     height: 18 0px;
+     
+ }
+ .sidebar__buttons {
+     display: grid;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     border-top: 1px solid #f6f6f6;
+     margin-top: 20px;
+ 
+ }
+ .enter {
+     width: 130px;
+     height: 30px;
+     background: yellow;
+     font-size: 18px;
+     transition: .5s;
+ 
+ }
+ .delete {
+     width: 130px;
+     height: 30px;
+     background: white;
+     border: 1px solid grey;
+     font-size: 18px;
+     transition: .5s;
+ }
+ .enter:hover {
+     background: #000;
+     color: white;
+ }
+ .delete:hover {
+     background: #000;
+     color: white;
+ }
+ }

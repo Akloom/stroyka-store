@@ -1,0 +1,71 @@
+.SidebarBasket {
+    display: flex;
+    flex-direction: column; 
+    
+
+
+}
+.SidebarCart {
+    border: 2px solid #f6f6f6;
+    width: 270px;   
+   
+}
+.cart_total {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;   ;  
+    border-bottom: 2px solid #f6f6f6;
+    width: 270px;
+}
+.cart_info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 250px;
+    
+}
+.side_info {
+    display: flex;
+    justify-content: space-between; 
+}
+.pay_info {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.pay_cart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+.sidebar_button {
+    border-top: 2px solid #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.cart_btn {
+    width: 246px;
+    height: 48px;
+    background: yellow;
+    font-size: 18px;
+}
+
+.sidecart_info {
+    display: flex;
+    max-width: 350px;
+    flex-direction: column;
+    font-weight: 400;
+    padding: 10px;
+    max-width: 290px;
+    gap: 7px;
+    
+    
+}
+.cart_h4 {
+    padding: 10px;
+}

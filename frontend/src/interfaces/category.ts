@@ -1,5 +1,5 @@
 import { Meta, Published} from '.';
-import { Product } from './popular';
+
 import { Subcategory } from './subcategory';
 
 export interface Category extends Published{

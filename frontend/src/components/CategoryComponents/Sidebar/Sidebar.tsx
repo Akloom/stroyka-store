@@ -1,8 +1,8 @@
 "use client";
 import { SearchSidebar } from "@/components/Icons/Icons";
 import styles from "./Sidebar.module.scss";
-import { BrandSidebar } from "../../../../interfaces/brands";
 import { useState } from "react";
+import { BrandSidebar } from "@/interfaces/brands";
 export default function SidebarCategory({ list }: { list: BrandSidebar[] }) {
   const [checkedList, setCheckedList] = useState<number[]>([]);
 
@@ -35,7 +35,7 @@ export default function SidebarCategory({ list }: { list: BrandSidebar[] }) {
           <h3>Бренды</h3>
           <div className={styles.sidebar__input}>
             <input type="text" className={styles.search} placeholder="Поиск" />
-            <SearchSidebar />
+            <div className={styles.seacrh_icon}><SearchSidebar/></div>
           </div>
           <div className={styles.brand}>
             {list.map((brand) => {

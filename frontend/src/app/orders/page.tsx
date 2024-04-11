@@ -1,3 +1,5 @@
+import BannerOrder from "@/components/OrderComponents/Banner/Banner";
+import NotOrders from "@/components/OrderComponents/NotOrders/NotOrders";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function Orders() {
-  return <div>Page</div>;
+  return (
+    <div>
+    <BannerOrder />
+    <NotOrders />
+  </div>
+  )
+ 
 }
