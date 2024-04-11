@@ -1,7 +1,7 @@
 "use client";
 import { ProductMinus, ProductPlus } from "@/components/Icons/Icons";
 import styles from "./List.module.scss";
-import { getCartList } from "@/store/reducers/basket.selectors";
+import { getBasketCount, getCartList } from "@/store/reducers/basket.selectors";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import { useState } from "react";
@@ -11,13 +11,14 @@ export default function ListCart() {
   const handleButtonClick = () => {
     setIsVisible(false);
   }
-  const [count, setCount] = useState(0);
-  const increment = () => {
-    setCount(count + 1);
+  const counts = useSelector(getBasketCount)
+   const [count, setCount] = useState(0);
+   const increment = () => {
+   setCount(count + 1);
   };
-  const decrement = () => {
-    setCount(count - 1);
-  };
+   const decrement = () => {
+     setCount(count - 1);
+   };
   
   const list = useSelector(getCartList);
   return (
@@ -45,7 +46,7 @@ export default function ListCart() {
                     <button className={styles.cartbtn1} onClick={increment}>
                       <ProductPlus />
                     </button>
-                    <span className={styles.cart_num}>{count}</span>
+                    <span className={styles.cart_num}>{counts}</span>
                     <button className={styles.cartbtn2} onClick={decrement}>
                       <ProductMinus />
                     </button>
@@ -59,7 +60,7 @@ export default function ListCart() {
                     </button>
                   </div>
                 </div>
-              </ul>
+              </ul> 
             </ul>
           );
         })}

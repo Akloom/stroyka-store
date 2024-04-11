@@ -18,9 +18,13 @@ const Links = () => {
         <span>Заказы</span>
       </Link>
       <Link href={"/cart"} className={styles.link}>
-      {count}
-        <CartIcon />
-        <span>Корзина</span>
+<div className={styles.posBas}  >
+  
+          <div className={styles.count}>{count}</div>
+          <CartIcon />
+          <span>Корзина </span>
+          
+</div  >
       </Link>
     </>
   );
