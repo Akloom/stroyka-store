@@ -9,7 +9,7 @@ export default function CartLayout({
   return (
     <div >
       
-      <div className={styles.loser}>
+      <div >
       
       </div>
       {children}

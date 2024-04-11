@@ -19,13 +19,14 @@ export const revalidate = 10;
 
 export default async function Product( {params: {id}}: ProductType) {
   const ProductComponents = await fatchProductPageList(+id)
-  const IpopularProduct = await getProducts()
-  console.log(ProductComponents);
-  console.log(IpopularProduct)
+ 
+  // console.log(ProductComponents);
+  // console.log(IpopularProduct)
   
   return (
   <div>
     <ProductComponent productinfo={ProductComponents.data}/>
+
   </div>
   )
   

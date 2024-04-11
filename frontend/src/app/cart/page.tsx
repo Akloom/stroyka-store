@@ -23,7 +23,6 @@ export default function Cart() {
         <main className={styles.main}>
         <NotProductBasket />
         <ListCart />
-        <SidebarCart />
         </main>
       
       </div>

@@ -10,7 +10,7 @@ import {
   TruckProductPage,
 } from "@/components/Icons/Icons";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "@/store/reducers/basket.reducer";
 import { useState } from "react";
 import Modal from "@/shared/Modal/Modal";
@@ -30,6 +30,7 @@ export default function ProductComponent({
     setAdded(productinfo)
     dispatch(addProduct(productinfo))
   }
+  
     const [count , setCount] = useState(0)
 
     const increment = () => {
@@ -57,7 +58,7 @@ export default function ProductComponent({
           <h6 className={styles.InStock}><InStock />В наличии</h6>
           <span className={styles.prices}>{productinfo.Price}₽</span>
           <div className={styles.product_buttons}>
-            <button className={styles.product_basket} onClick={() => onAdded(productinfo)} >В корзину</button>
+            <button className={styles.product_basket} onClick={() => onAdded(productinfo)}>В корзину</button>
             <div className={styles.plus_minus}>
               <button className={styles.product_btn} onClick={increment}>
                 <ProductPlus />
@@ -79,17 +80,24 @@ export default function ProductComponent({
       </div>
       <div className={styles.content}>
         <h1 className={styles.description}>Описание</h1>
-        <BlocksRenderer content={productinfo.content} />
+        { productinfo.content && <BlocksRenderer content={productinfo.content} />}
       </div>
       </div>   
+
+
+
+
+      
       <Modal isVisible={!!added} onClose={() => setAdded(null)} title="Товар добавлен в корзину">
       <div className={styles.product_modal}>
-      <Image className={styles.modal}
-              src={productinfo.Image.url}
-              alt={productinfo.title}
-              width={180}
-              height={134}
-            />
+      {
+        productinfo.Image && <Image className={styles.modal}
+        src={productinfo.Image.url}
+        alt={productinfo.title}
+        width={180}
+        height={134}
+      />
+      }
             <div className={styles.modal_information}>
             <h2 className={styles.modal_title}>{productinfo.title}</h2>
             <span className={styles.prices}>{productinfo.Price}₽</span>
