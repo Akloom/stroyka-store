@@ -1,23 +1,11 @@
+import { BrandsResponse, SidebarBrandsResponse } from "@/interfaces/brands";
+import { CardCategoryResponse, CategoriesResponse } from "@/interfaces/category";
+import { IComments, IPopularBrands, IPopularCategories, IPopularProducts, IPopularPromotions } from "@/interfaces/popular";
+import { SubCategoryResponse } from "@/interfaces/subcategory";
 import ky from "ky";
-import {
-  IPopularBrands,
-  IPopularCategories,
-  IComments,
-  IPopularProducts,
-  IPopularPromotions,
-} from "../../../interfaces/popular";
-import {
-  BrandsResponse,
-  SidebarBrandsResponse,
-} from "../../../interfaces/brands";
-import {
-  CardCategoryResponse,
-  CategoriesResponse,
-} from "../../../interfaces/category";
-import { SubCategoryResponse } from "../../../interfaces/subcategory";
 
 const strapi = ky.create({
-  prefixUrl: `http://127.0.0.1:1337/api/`,
+  prefixUrl: `http://localhost:1337/api/`,
 });
 
 export const getPromotions = (): Promise<IPopularPromotions> => {
