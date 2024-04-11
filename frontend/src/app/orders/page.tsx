@@ -1,5 +1,6 @@
 import BannerOrder from "@/components/OrderComponents/Banner/Banner";
 import NotOrders from "@/components/OrderComponents/NotOrders/NotOrders";
+import OrderList from "@/components/OrderComponents/OrderList/OrderList";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export default function Orders() {
   return (
     <div>
     <BannerOrder />
+    <OrderList />
     <NotOrders />
   </div>
   )

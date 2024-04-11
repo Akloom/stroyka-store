@@ -1,11 +1,14 @@
 .bannerCatalog {
     display: flex;
     justify-content: center;
+    position: relative;
     margin: 20px;
+    max-width: 1450px;
+    margin: auto;
 }
 .title {
     position: absolute;
-    bottom: 53%;
+    bottom: 39%;
     left: 10%;
 }
 .h1 {
@@ -19,11 +22,14 @@
     font-weight: 400;
 }
 @media screen  and (max-width: 1400px) {
-    .bannerCatalog {
-        display: flex;
-        justify-content: center;
-        margin: 20px;
-    }
+        .bannerCatalog {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            position: relative;
+            max-width: 1450px;
+            margin: auto;
+        }
     .h1 {
         font-size: 30px;
         margin-top: 20px;
@@ -41,16 +47,23 @@
     }
     .title {
         position: absolute;
-        bottom: 75%;
+        bottom: 42%;
         left: 10%;
       
     }
 }
 @media screen  and (max-width: 1200px) {
+    .bannerCatalog {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        position: relative;
+        max-width: 1450px;
+        margin: auto;
+    }
     .title {
         position: absolute;
-        
-        bottom: 76%;
+        bottom: 34%;
         left: 10%;
       
     }
@@ -71,14 +84,21 @@
     }
 }
 @media screen  and (max-width: 972px) {
+    .bannerCatalog {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        position: relative;
+        max-width: 1450px;
+        margin: auto;
+    }
     .bannerCatalog img {
         width: 900px;
         height: 150px;
     }
     .title {
         position: absolute;
-        
-        bottom: 78%;
+        bottom: 30%;
         left: 10%;
       
     }
@@ -96,6 +116,14 @@
 }
 
 @media screen  and (max-width: 460px) {
+    .bannerCatalog {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        position: relative;
+        max-width: 1450px;
+        margin: auto;
+    }
     .bannerCatalog img {
         width: 400px;
         height: 120px;
@@ -112,7 +140,7 @@
     }
     .title {
         position: absolute;
-        bottom: 73%;
+        bottom: 29%;
         left: 10%;
       
     }

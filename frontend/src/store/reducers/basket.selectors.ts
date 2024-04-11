@@ -9,3 +9,5 @@ export const getTotalPrice = (store: RootState) => {
 }
 
 export const getCartList = (store: RootState) => store.list
+
+export const getOrderList = (store: RootState) => store.list

@@ -9,10 +9,11 @@ export default function NotProductBasket({}) {
     // Логика для обработки нажатия на кнопку
     setDisplayText(false); // Устанавливаем состояние, чтобы скрыть текст
   };
+    
 
   return (
     <div>
-      {displayText && <p className={styles.notProduct}>Корзина пуста , пожалуйста добавьте товар в корзину</p>}
+      {displayText && <p className={styles.notProduct}>Корзина пустая , пожалуйста добавьте товар в корзину</p>}
     </div>
   );
 }

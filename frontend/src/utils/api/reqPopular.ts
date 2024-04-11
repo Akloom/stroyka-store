@@ -19,6 +19,10 @@ export const getCategories = (): Promise<IPopularCategories> => {
 export const getProducts = (): Promise<IPopularProducts> => {
   return strapi.get("popular-products/?populate=image").json();
 };
+export const getProduct = (id: number): Promise<IPopularProducts> => {
+  return strapi.get(`popular-products/${id}?populate=image`).json();
+};
+
 
 export const getBrands = (): Promise<IPopularBrands> => {
   return strapi.get("popular-brands/?populate=image").json();

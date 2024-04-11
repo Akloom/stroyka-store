@@ -24,13 +24,16 @@ const PopularProductsCard = ({ data }: PopularProductsCardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.card__image}>
-        <Image
+        {
+          data.image && <Image
           src={data.image.url}
           alt="image"
           fill
           sizes="100%"
           style={{ objectFit: "contain" }}
-        />
+        /> 
+        }
+         
       </div>
       <div className={styles.card__content}>
         <p className={styles.card__desc} onClick={() => router.push(`/product/${data.id}`)}>{data.description}</p>

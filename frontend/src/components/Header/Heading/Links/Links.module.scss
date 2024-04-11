@@ -13,10 +13,32 @@
     transition: .3s ease-in;
   }
 
+
   span {
     @include mixin.link(15px, 500, var(--dark-blue-600));
     transition: .3s ease-in;
+    
   }
+ 
+}
+.posBas{
+  position: relative;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.count {
+  position: relative;
+  left: 20px;
+  top: 15px;
+  background: yellow;
+  text-align: center;
+  width: 22px;
+  border-radius: 20px;
 }
 
 .link:hover {
