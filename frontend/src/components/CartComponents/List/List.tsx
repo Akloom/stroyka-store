@@ -49,14 +49,14 @@ export default function ListCart(item) {
                 <li className={styles.cart_info}>
                   <div className={styles.information_cart}>
                     <h3 className={styles.cart_title}>{item.title}</h3>
-                    <span className={styles.cart_price}>{item.Price}</span>
+                    <span className={styles.cart_price}>Стоимость: {item.Price}₽</span>
                   </div>
                   <li className={styles.cart_buttons}>
-                    <button className={styles.cartbtn2} onClick={onAdded}>Оплатить</button>
+                    <button className={styles.cartbtn} onClick={onAdded}>Оплатить</button>
                   </li>
                 </li>
                 <div className={styles.code_product}>
-                  <h3>Код товара: 
+                  <h3 className={styles.codeproduct}>Код товара: <br />
                   34078988-0047
                   </h3>
                   <div className={styles.delete_btn}>
@@ -80,7 +80,7 @@ export default function ListCart(item) {
     <Modal isVisible={!!added} onClose={() => setAdded(null)} title="Оплачено">
     <div className={styles.thanks_you}>
            <ThancksSpasibo />
-           <h1>Спасибо</h1>
+           <h1 className={styles.thanks}>Спасибо</h1>
            <div className={styles.description}>
             <p className={styles.title}>Ваша заявка принята. Мы свяжемся с вами в ближайшее время</p>
            </div>

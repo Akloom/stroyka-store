@@ -2,10 +2,13 @@
     display: flex;
     justify-content: center;
     margin: 20px;
+    position: relative;
+    max-width: 1450px;
+    margin: auto;
 }
 .title {
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     left: 10%;
 }
 .h1 {
@@ -41,7 +44,7 @@
     }
     .title {
         position: absolute;
-        bottom: 75%;
+        bottom: 35%;
         left: 10%;
       
     }
@@ -49,8 +52,7 @@
 @media screen  and (max-width: 1200px) {
     .title {
         position: absolute;
-        
-        bottom: 76%;
+        bottom: 32%;
         left: 10%;
       
     }
@@ -78,7 +80,7 @@
     .title {
         position: absolute;
         
-        bottom: 78%;
+        bottom: 34%;
         left: 10%;
       
     }
@@ -112,7 +114,29 @@
     }
     .title {
         position: absolute;
-        bottom: 73%;
+        bottom: 70%;
+        left: 10%;
+      
+    }
+}
+@media screen  and (max-width: 460px) {
+    .bannerCatalog img {
+        width: 400px;
+        height: 120px;
+    }
+    .h1 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .h4 {
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .title {
+        position: absolute;
+        bottom: 32%;
         left: 10%;
       
     }

@@ -21,7 +21,7 @@ export default function Cart() {
       <div >
         <BannerCart />
         <main className={styles.main}>
-        <NotProductBasket />
+    
         <ListCart />
         </main>
       

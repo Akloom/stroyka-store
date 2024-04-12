@@ -34,9 +34,6 @@ export default function OrderList() {
                   <span className={styles.cart_num}>Количество: {count}</span>
                 </li>
               </li>
-              <div className={styles.code_product}>
-                <div className={styles.delete_btn}></div>
-              </div>
              
             </ul>
             <div className={styles.status}>

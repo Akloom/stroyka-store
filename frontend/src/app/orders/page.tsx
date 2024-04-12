@@ -13,7 +13,7 @@ export default function Orders() {
     <div>
     <BannerOrder />
     <OrderList />
-    <NotOrders />
+  
   </div>
   )
  
